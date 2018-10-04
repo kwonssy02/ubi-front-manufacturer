@@ -26,7 +26,6 @@ import VehicleList from './views/VehicleList';
 import InsertVehicleData from './views/InsertVehicleData';
 import InsertVehicleType from './views/InsertVehicleType';
 import InsertVehicle from './views/InsertVehicle';
-import UpdateDataProvidingAgreement from './views/UpdateDataProvidingAgreement';
 
 import VehicleTypeList from './views/VehicleTypeList';
 import ManufacturerList from './views/ManufacturerList';
@@ -54,7 +53,7 @@ class App extends Component {
         <Router>
             <div>
                 <Navbar color="dark" dark expand="md">
-                    <NavbarBrand tag={Link} to="/">UBI</NavbarBrand>
+                    <NavbarBrand tag={Link} to="/">제조사</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav navbar>
@@ -66,9 +65,6 @@ class App extends Component {
                             </NavItem>
                             <NavItem>
                                 <NavLink tag={Link} to="/insertVehicle" tag={RRNavLink}>차량 등록</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink tag={Link} to="/updateDataProvidingAgreement" tag={RRNavLink}>보험사 정보 제공 동의</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink tag={Link} to="/vehicleList" tag={RRNavLink}>차량 조회</NavLink>
@@ -101,7 +97,6 @@ class App extends Component {
                                 <Route path="/insertVehicleData" component={InsertVehicleData} />
                                 <Route path="/insertVehicleType" component={InsertVehicleType} />
                                 <Route path="/insertVehicle" component={InsertVehicle} />
-                                <Route path="/updateDataProvidingAgreement" component={UpdateDataProvidingAgreement} />
 
                                 <Route path="/userList" component={UserList} />
                                 <Route path="/manufacturerList" component={ManufacturerList} />
